@@ -7,6 +7,10 @@ use Mix.Config
 
 # Configures the endpoint
 config :sparrow, Sparrow.Endpoint,
+  token: System.get_env("SPARROW_TOKEN"),
+  site_id: System.get_env("SPARROW_SITE_ID"),
+  image_service_uri: System.get_env("IMAGE_SERVICE_URI"),
+  content_service_uri: System.get_env("CONTENT_SERVICE_URI"),
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "YEJpDCK2dMImdPhxSXU7GPEFhYieF/c7RynymQ/3lJRa1tKMwjKpPxhpCsdj4mow",
