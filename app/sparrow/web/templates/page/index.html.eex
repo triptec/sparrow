@@ -1,33 +1,14 @@
 <h2>Hetaste</h2>
 <%= for article <- @trending do %>
-  <h3>
-    <%= article["teaser"]["headline"] %>
-  </h3>
-  <div>
-    <small>
-      <%= article["teaser"]["text"] %>
-    </small>
-  </div>
+  <%= render "article.html", article: article %>
 <% end %>
+
 <h2>Senaste</h2>
 <%= for article <- @latest do %>
-  <h3>
-    <%= article["teaser"]["headline"] %>
-  </h3>
-  <div>
-    <small>
-      <%= article["teaser"]["text"] %>
-    </small>
-  </div>
+  <%= render "article.html", article: article %>
 <% end %>
+
 <h2>Ettan</h2>
 <%= for article <- @page do %>
-  <h3>
-    <%= article["teaser"]["headline"] %>
-  </h3>
-  <div>
-    <small>
-      <%= article["teaser"]["text"] %>
-    </small>
-  </div>
+  <%= render "article.html", article: article %>
 <% end %>

@@ -16,9 +16,9 @@ defmodule Sparrow.PageController do
     trending = Enum.find_value(articles, fn({:trending, value}) -> value; _ -> false end )
     page = Enum.find_value(articles, fn({:page, value}) -> value; _ -> false end )
 
-    IO.inspect length(latest)
-    IO.inspect length(trending)
-    IO.inspect length(page)
+    #IO.inspect length(latest)
+    #IO.inspect length(trending)
+    #IO.inspect page
     render conn, "index.html", trending: trending, latest: latest, page: page
   end
 end

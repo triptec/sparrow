@@ -1,0 +1,9 @@
+<%= teaser_image(@article) %>
+<h3>
+  <%= @article["teaser"]["headline"] %>
+</h3>
+<div>
+  <small>
+    <%= @article["teaser"]["text"] %>
+  </small>
+</div>
