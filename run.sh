@@ -1,1 +1,1 @@
-docker run -p 4000:4000 -it -e "CONTENT_SERVICE_URI=$CONTENT_SERVICE_URI" -e "IMAGE_SERVICE_URI=$IMAGE_SERVICE_URI" -e "SPARROW_SITE_ID=$SPARROW_SITE_ID" -e "SPARROW_TOKEN=$SPARROW_TOKEN" -v "$PWD/app":/app -w /app/sparrow triptec/sparrow $*
+docker run --name="elixir_sparrow" -p 4000:4000 -it -e "CONTENT_SERVICE_URI=$CONTENT_SERVICE_URI" -e "IMAGE_SERVICE_URI=$IMAGE_SERVICE_URI" -e "SPARROW_SITE_ID=$SPARROW_SITE_ID" -e "SPARROW_TOKEN=$SPARROW_TOKEN" -v "$PWD/app":/app -w /app/sparrow triptec/sparrow $*
